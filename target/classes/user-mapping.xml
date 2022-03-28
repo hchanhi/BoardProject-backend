@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="user">       
+
+	
+	<select id="login" parameterType="java.lang.String" resultType="user">
+		select * from userInfo where userID=#{userID} and userPassword=#{userPassword}
+	</select>
+	
+	
+	<insert id="join" parameterType="user" >
+		insert into userInfo(userNicName,userID,userEmail,userPassword)
+		values(#{userNicName},#{userID},#{userEmail},#{userPassword})
+	</insert>
+	
+	<select id="findId" parameterType="java.lang.String" resultType="user">
+		select * from userInfo where userNicName=#{userNicName} and userEmail=#{userEmail}
+	</select>
+	
+	<select id="findPassword" parameterType="java.lang.String" resultType="user">
+		select * from userInfo where userID=#{userID} and userNicName=#{userNicName} and userEmail=#{userEmail}
+	</select>
+	
+</mapper>
+
+

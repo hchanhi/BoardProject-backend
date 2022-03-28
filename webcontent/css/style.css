@@ -1,0 +1,629 @@
+/* 최상위 태그 */
+/* --------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --background: #424242;
+  --navbar: #ffffff;
+  --board-back: #ddd;
+  --board-word: #000;
+  --btn-col: #6e6e6e;
+}
+
+html {
+  font-size: 10px;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* 컬러는 상속 */
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background: #848484;
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 80px;
+}
+
+footer {
+  height: 80px;
+  background: #333;
+  color: #fff;
+  display: flex;
+  transform: translateY(200%);
+  align-items: center;
+}
+
+footer div {
+  margin: 0 30px;
+}
+
+/* --------------------------------------------------------------- */
+
+/* -------------------------네비바 속성 ---------------------- */
+.nav_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--navbar);
+}
+
+.logo {
+  display: flex;
+  font-size: 30px;
+  padding: 8px 12px;
+}
+.logo:hover {
+  color: #999;
+  transition: 0.5s;
+}
+.menu {
+  display: flex;
+  font-size: 14px;
+}
+.menu li:hover {
+  color: #999;
+
+  transition: 0.5s;
+}
+
+.menu li {
+  padding: 8px 12px;
+}
+
+.before_profile {
+  padding-right: 20px;
+  display: flex;
+  font-size: 15px;
+}
+
+.before_profile li:first-child:hover {
+  text-decoration: underline;
+}
+
+.before_profile li:last-child:hover {
+  text-decoration: underline;
+}
+
+.before_profile li {
+  padding: 8px 8px;
+}
+
+/* 버튼 속성 (숨김, 나타남) */
+.toggleButton {
+  display: none;
+  position: absolute;
+  right: 32px;
+  top: 17px;
+  font-size: 32px;
+}
+
+.toggleButton:hover {
+  color: #999;
+  transition: 0.5s;
+}
+
+.enter_title {
+  text-align: center;
+  padding-top: 30px;
+}
+/* ---------------------게시판 속성-------------------- */
+.home_wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_board_wrap {
+  width: 30%;
+  height: 400px;
+  margin: 150px 10px;
+  padding: 50px;
+  background-color: var(--board-back);
+  border-radius: 20px;
+  color: var(--board-word);
+}
+
+.home_board_title {
+  margin-bottom: 20px;
+}
+
+.home_board_title strong {
+  font-size: 3rem; /* 최상위 값에 3을 곱한 값 */
+}
+
+.home_board_list {
+  width: 100%;
+  border-top: 2px solid #000;
+}
+
+.home_board_list > div {
+  border-bottom: 1px solid #ddd;
+  font-size: 0;
+}
+
+.home_board_list > div.top {
+  border-bottom: 1px solid #999;
+  padding: 15px 0;
+  font-weight: 600;
+}
+
+.home_board_list > div:last-child {
+  border-bottom: 1px solid #000;
+}
+
+.home_board_list > div > div {
+  display: inline-block;
+  vertical-align: center; /* 블럭 안의 가운데 정렬 */
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.2rem;
+}
+
+.home_board_list .top .title {
+  text-align: center;
+}
+
+.home_board_list .title {
+  width: 80%;
+  text-align: left;
+}
+
+.home_board_list .title:hover {
+  text-decoration: underline;
+}
+
+.home_board_list .writer {
+  width: 15%;
+}
+
+/* ------------------------------------------------ */
+
+.btn_wrap {
+  margin-top: 30px;
+  text-align: center; /* 버튼을 가운데로 위치*/
+  font-size: 0; /* 버튼의 위치를 정확하게 하기 위해서 버튼의 부모 값을 설정*/
+}
+
+.btn_wrap button {
+  display: inline-block; /* 가로 배치 */
+  min-width: 80px;
+  margin-left: 10px;
+  padding: 10px;
+  border: 1px solid var(--btn-col);
+  border-radius: 10px;
+  background-color: #fff;
+  font-size: 1.4rem;
+}
+
+/* btn_wrap의 첫번째 버튼 속성 */
+.btn_wrap button:first-child {
+  margin-left: 0;
+}
+
+.btn_wrap button.list {
+  background-color: var(--btn-col);
+  color: #fff;
+}
+
+/* ----------------------게시판 속성---------------------- */
+.board_wrap {
+  width: 1000px;
+  margin: 80px auto; /* 위아래 100px 좌우 가운데 정렬 */
+  margin-bottom: 10px;
+  padding: 30px;
+  background-color: var(--board-back);
+  box-shadow: #777;
+  border-radius: 20px;
+  color: var(--board-word);
+}
+
+.board_title {
+  padding-top: 20px;
+  margin: 20px;
+  margin-bottom: 30px;
+}
+
+.board_title strong {
+  font-size: 3rem; /* 최상위 값에 3을 곱한 값 */
+}
+
+.board_title p {
+  margin-top: 5px;
+  font-size: 1.4rem;
+}
+
+.board_list {
+  width: 100%;
+  border-top: 2px solid #000;
+}
+
+.board_list > div {
+  border-bottom: 1px solid #ddd;
+  font-size: 0;
+}
+
+.board_list > div.top {
+  border-bottom: 1px solid #999;
+  padding: 15px 0;
+  font-weight: 600;
+}
+
+.board_list > div:last-child {
+  border-bottom: 1px solid #000;
+}
+
+.board_list > div > div {
+  display: inline-block;
+  vertical-align: center; /* 블럭 안의 가운데 정렬 */
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.4rem;
+}
+
+.board_list .num {
+  width: 10%;
+}
+
+.board_list .top .title {
+  text-align: center;
+}
+
+.board_list .title {
+  width: 60%;
+  text-align: left;
+}
+
+.board_list .writer {
+  width: 10%;
+}
+
+.board_list .date {
+  width: 10%;
+}
+
+.board_list .count {
+  width: 10%;
+}
+/* --------------------------페이지 버튼-------------- */
+
+.board_page {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 0;
+  color: #6e6e6e;
+}
+
+.board_page > a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box; /* border-box 사이즈 안에서 정렬 */
+  vertical-align: middle;
+  border: 1px solid #6e6e6e;
+  border-left: 0;
+  line-height: 100%;
+}
+
+.board_page > a:first-child {
+  border-left: 1px solid #6e6e6e;
+}
+
+.board_page > a.bt {
+  padding-top: 10px;
+  font-size: 1.2rem;
+  letter-spacing: -1px;
+}
+
+.board_page > a.num {
+  padding-top: 9px;
+  font-size: 1.4rem;
+}
+
+.board_page > a.num.on {
+  border-color: #000;
+  background-color: #000;
+  color: #fff;
+}
+
+/* ----------------------게시글 속성--------------------- */
+
+.board_view {
+  width: 100%;
+  border-top: 2px solid #000;
+}
+
+/* 게시글 제목 영역 */
+.board_view .title {
+  padding: 20px 15px;
+  border-bottom: 1px dashed #ddd;
+  font-size: 2rem;
+}
+
+/* 게시글 정보 영역 */
+.board_view .info {
+  padding: 15px;
+  border-bottom: 1px solid #999;
+  font-size: 0;
+}
+
+.board_view .info dl {
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 1.4rem;
+}
+
+.board_view .info dl:first-child {
+  padding-left: 0;
+}
+
+/* 글 정보를 구분하는 선 삽입 */
+.board_view .info dl::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 0;
+  display: block;
+  width: 1px;
+  height: 13px;
+  background-color: #ddd;
+}
+
+.board_view .info dl:first-child::before {
+  display: none;
+}
+
+.board_view .info dl dt {
+  display: inline-block;
+  font-size: 1.4rem;
+}
+
+.board_view .info dl dd {
+  display: inline-block;
+  font-size: 1.4rem;
+  margin-left: 10px;
+  color: #777;
+}
+
+.board_view .cont {
+  padding: 15px;
+  border-bottom: 1px solid #000;
+  line-height: 160%;
+  font-size: 1.4rem;
+}
+
+/* ------------------------글쓰기 속성------------------------ */
+
+.board_write {
+  border-top: 2px solid #000;
+}
+
+.board_write .title,
+.board_write .info {
+  padding: 15px;
+  font-size: 0;
+}
+.board_write .title dt,
+.board_write .title dd,
+.board_write .info dt,
+.board_write .info dd {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.4rem;
+}
+.board_write .title dt,
+.board_write .info dt {
+  width: 100px;
+}
+.board_write .info {
+  border-top: 1px dashed #777;
+  border-bottom: 1px solid #000;
+}
+
+.board_write .info dl {
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+}
+
+.board_write .title dd {
+  width: calc(100% - 100px);
+}
+
+.board_write .title input,
+.board_write .info input {
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--board-back);
+  background-color: var(--board-back);
+  color: var(--board-word);
+}
+
+.board_write .title input {
+  width: 80%;
+}
+
+.board_write .cont {
+  border-bottom: 1px solid #000;
+}
+
+.board_write .cont textarea {
+  display: block;
+  width: 100%;
+  height: 300px;
+  padding: 15px;
+  box-sizing: border-box;
+  border: 0;
+  resize: none;
+  background-color: var(--board-back);
+  color: var(--board-word);
+}
+
+/* input선택시 테두리 */
+.board_write input:focus {
+  outline: 1.5px solid #424242;
+}
+
+/* textarea선택시 테두리 */
+.board_write textarea:focus {
+  outline: 1.5px solid #424242;
+}
+
+/* ------------------------로그인 속성------------------------ */
+
+.login_body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+}
+
+.login_main {
+  width: 400px;
+  margin: 100px auto;
+  margin-bottom: 50px;
+  background: #ddd;
+  border-radius: 10px;
+}
+
+.login_main h1 {
+  text-align: center;
+  padding: 20px 0 20px 0;
+  font-size: 40px;
+  border-bottom: 1px solid #000;
+}
+
+login_ckeck {
+	text-align: center;
+	font-size: 40px;
+	color : red;
+	padding-top : 20px
+}
+
+.login_main form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+form .inp_field {
+  position: relative;
+  border-bottom: 2px solid #000;
+  margin: 30px 0;
+}
+
+.inp_field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.inp_field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #999;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.inp_field span::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #585858;
+  transition: 0.5s;
+}
+
+.inp_field input:focus ~ label,
+.inp_field input:valid ~ label {
+  top: -5px;
+  color: #585858;
+}
+
+.inp_field input:focus ~ span::before,
+.inp_field input:valid ~ span::before {
+  width: 100%;
+}
+
+
+.forgot {
+  width: 100%;
+  display: flex;
+  margin: -5px 0 20px 5px;
+  color: #999;
+  cursor: pointer;
+}
+
+.forgot .id:hover,
+.forgot .pw:hover {
+  text-decoration: underline;
+}
+
+.lg_submit {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  border: 1px solid;
+  background: #999;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #ddd;
+  font-weight: bold;
+  outline: none;
+}
+
+.lg_submit:hover {
+  border-color: #999;
+  transition: 0.5s;
+}
+
+.signup_link {
+  margin: 20px 0;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+}
+
+.signup_link a {
+  color: #585858;
+}
+
+.signup_link a:hover {
+  text-decoration: underline;
+}
+
+.id_ok {
+	color:#fff; 
+	display: none;
+}
+	
+.id_already {
+	color:#6A82FB; 
+	display: none;
+}
+
+

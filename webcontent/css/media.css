@@ -1,0 +1,136 @@
+@media (max-width: 1000px) {
+  .nav_bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .before_profile {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+  .toggleButton {
+    display: block;
+  }
+  .menu.active,
+  .before_profile.active {
+    display: flex;
+  }
+
+  .home_wrap {
+    flex-direction: column;
+  }
+
+  .home_board_wrap {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 70%;
+  }
+
+  .home_board_wrap:first-child {
+    margin-top: 90px;
+  }
+  .board_wrap {
+    width: 95%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    min-width: 320px;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+
+  .board_list .count,
+  .board_list .date {
+    display: none;
+  }
+
+  .board_list .writer {
+    width: 20%;
+  }
+
+  .board_list .title {
+    width: 70%;
+    text-indent: 10px;
+  }
+
+  .board_list .top .title {
+    text-indent: 0;
+  }
+  .board_page > a {
+    width: 26px;
+    height: 26px;
+  }
+
+  .btn_wrap button {
+    padding: 7px;
+    margin-bottom: 15px;
+  }
+  .board_page > a.bt {
+    padding-top: 7px;
+  }
+
+  .board_page > a.num {
+    padding-top: 7px;
+  }
+  .board_view .info dl {
+    padding: 0 10px;
+  }
+
+  .comment_wrap {
+    width: 95%;
+    margin-top: 20px;
+    min-width: 320px;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+
+  .comment_write_wrap {
+    width: 95%;
+    margin-top: 20px;
+    min-width: 320px;
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+
+  .comment_info input {
+    margin: 0;
+  }
+
+  .comment_input input {
+    width: 100%;
+  }
+
+  .board_write .title dt,
+  .board_write .info dt {
+    display: none;
+  }
+
+  .board_write .title dd {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .board_write .title input {
+    width: 100%;
+  }
+
+  .board_write .info dl {
+    width: 49%;
+  }
+  .board_write .info dl:first-child {
+    margin-right: 2%;
+  }
+  .board_write .info dd {
+    width: 100%;
+  }
+  .board_write .info input {
+    width: 100%;
+  }
+}

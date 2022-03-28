@@ -1,0 +1,59 @@
+.comment_wrap {
+  width: 400px;
+  margin: 10px auto; /* 위아래 100px 좌우 가운데 정렬 */
+  padding: 30px;
+  background-color: var(--board-back);
+  box-shadow: #777;
+  border-radius: 20px;
+  color: var(--board-word);
+}
+
+.comment_write_wrap {
+  width: 400px;
+  margin: 10px auto; /* 위아래 100px 좌우 가운데 정렬 */
+  padding: 30px;
+  background-color: var(--board-back);
+  border-radius: 10px;
+  color: var(--board-word);
+}
+
+.comment_title {
+  margin-left: 10px;
+}
+
+.comment_info input {
+  margin: 10px;
+  height: 15px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+}
+
+.comment_input {
+  display: flex;
+  align-items: center;
+}
+
+.comment_input input {
+  width: 80%;
+  height: 50px;
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.submitBtn {
+  width: 10%;
+  height: 60px;
+  padding: 5px;
+  margin-left: 10px;
+  border: none;
+  background-color: gray;
+  border-radius: 5px;
+}
+
+.comment_info input:focus,
+.comment_text:focus {
+  outline: 1px solid #424242;
+}
