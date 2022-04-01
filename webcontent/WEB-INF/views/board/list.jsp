@@ -33,7 +33,7 @@
             <div class="num">${list.bno}</div>
             <div class="title"><a href="/BoardProject/view.do?bno=${list.bno}">${list.title}</a></div>
             <div class="writer">${list.writer}</div>
-            <div class="date">${list.regdate}</div>
+            <div class="date"><fmt:formatDate pattern = "yyyy/MM/dd hh:mm:ss" value="${list.regdate}"/></div>
             <div class="count">${list.viewcnt}</div>
           </div>
           </c:forEach>

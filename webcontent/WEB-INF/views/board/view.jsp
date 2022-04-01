@@ -30,7 +30,7 @@
             </dl>
             <dl>
               <dt>작성일</dt>
-              <dd>${view.regdate}</dd>
+              <dd><fmt:formatDate pattern = "yyyy/MM/dd hh:mm:ss" value="${view.regdate}"/></dd>
             </dl>
             <dl>
               <dt>조회</dt>

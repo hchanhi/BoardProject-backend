@@ -6,7 +6,7 @@
 
 	
 	<select id="list"  resultType="com.vo.BoardVo">
-		select bno, title, content, writer, regdate, viewcnt from board
+		select bno, title, content, writer, regdate, viewcnt from board ORDER BY bno DESC
 	</select>
 	
 	
