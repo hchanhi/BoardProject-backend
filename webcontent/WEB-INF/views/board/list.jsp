@@ -37,6 +37,7 @@
             <div class="count">${list.viewcnt}</div>
           </div>
           </c:forEach>
+          </div>
       
         <div class="board_page">
           <!-- 나중에 <<, <, >, >> 대신 이미지 사용하기 -->
@@ -50,6 +51,7 @@
           <a href="#" class="bt next">></a>
           <a href="#" class="bt last">>></a>
         </div>
+       
         <c:if test="${!empty sessionScope.loginUser}">
         <div class="btn_wrap">
           <button onclick="location.href='/BoardProject/write_form.do'" class="list">
@@ -58,7 +60,6 @@
         </div>
         </c:if>
       </div>
-    </div>
     </div>
     <footer class="footer">
       <div><a href="/notice/notice.html">공지사항</a></div>
