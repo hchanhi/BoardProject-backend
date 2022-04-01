@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="../header.jsp" %>
+<%@ include file="../../../header.jsp" %>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -28,7 +28,7 @@
             <div class="count">조회</div>
           </div>
           
-          <c:forEach items="${lsit}" var="list">
+          <c:forEach items="${list}" var="list">
           <div>
             <div class="num">${lsit.bno }</div>
             <div class="title"><a href="boardView.html">${list.title}</a></div>

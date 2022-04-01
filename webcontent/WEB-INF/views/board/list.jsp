@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="../header.jsp" %>
+<%@ include file="../../../header.jsp" %>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -28,45 +28,16 @@
             <div class="count">조회</div>
           </div>
           
-          <c:forEach items="${lsit}" var="list">
+          <c:forEach items="${list}" var="list">
           <div>
-            <div class="num">${lsit.bno }</div>
-            <div class="title"><a href="boardView.html">${list.title}</a></div>
+            <div class="num">${list.bno}</div>
+            <div class="title"><a href="/BoardProject/view.do?bno=${list.bno}">${list.title}</a></div>
             <div class="writer">${list.writer}</div>
-            <div class="date">${lsit.regdate}</div>
+            <div class="date">${list.regdate}</div>
             <div class="count">${list.viewcnt}</div>
           </div>
           </c:forEach>
-          <div>
-            <div class="num">4</div>
-            <div class="title"><a href="boardView.html">글 제목</a></div>
-            <div class="writer">아무개</div>
-            <div class="date">2022.01.01</div>
-            <div class="count">10</div>
-          </div>
-          <div>
-            <div class="num">3</div>
-            <div class="title"><a href="boardView.html">글 제목</a></div>
-            <div class="writer">아무개</div>
-            <div class="date">2022.01.01</div>
-            <div class="count">10</div>
-          </div>
-          <div>
-            <div class="num">2</div>
-            <div class="title"><a href="boardView.html">글 제목</a></div>
-            <div class="writer">아무개</div>
-            <div class="date">2022.01.01</div>
-            <div class="count">10</div>
-          </div>
-          <div>
-            <div class="num">1</div>
-            <div class="title"><a href="boardView.html">글 제목</a></div>
-            <div class="writer">아무개</div>
-            <div class="date">2022.01.01</div>
-            <div class="count">10</div>
-          </div>
-        </div>
-
+      
         <div class="board_page">
           <!-- 나중에 <<, <, >, >> 대신 이미지 사용하기 -->
           <a href="#" class="bt first"><<</a>
@@ -79,12 +50,15 @@
           <a href="#" class="bt next">></a>
           <a href="#" class="bt last">>></a>
         </div>
+        <c:if test="${!empty sessionScope.loginUser}">
         <div class="btn_wrap">
-          <button onclick="location.href='./boardProject/write.do'" class="list">
+          <button onclick="location.href='/BoardProject/write_form.do'" class="list">
             글쓰기
           </button>
         </div>
+        </c:if>
       </div>
+    </div>
     </div>
     <footer class="footer">
       <div><a href="/notice/notice.html">공지사항</a></div>

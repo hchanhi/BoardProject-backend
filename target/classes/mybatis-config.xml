@@ -5,12 +5,14 @@
 <configuration>
 	<typeAliases>
 		<typeAlias alias="user"  type="com.vo.UserVo" />
-		<typeAlias alias="user"  type="com.vo.UserVo" />
+		<typeAlias alias="board"  type="com.vo.BoardVo" />
 	</typeAliases>
 
 	<mappers>
 		<mapper resource="user-mapping.xml"/>
-		<mapper resource="user-mapping.xml"/>
+		<mapper resource="board-mapping.xml"/>
 	</mappers>
+	
+	
 </configuration>
 

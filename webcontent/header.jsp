@@ -28,7 +28,7 @@
 
         <ul class="menu">
           <li><a href="./index.jsp">HOME</a></li>
-          <li><a href="./board/board.jsp">BOARD</a></li>
+          <li><a href="/BoardProject/list.do">BOARD</a></li>
           <li><a href="/QnA/QnA.html">Q&A</a></li>
           <li><a href="/notice/notice.html">NOTICE</a></li>
         </ul>
@@ -37,14 +37,14 @@
         <c:choose>
 		<c:when test="${empty sessionScope.loginUser}">
 		<ul class="before_profile">
-        		<li><a href="./login.jsp">login</a></li>
+        		<li><a href="/BoardProject/login_form.do">login</a></li>
        			<li>/</li>
-       			<li><a href="./join.jsp">join</a></li>
+       			<li><a location href="/BoardProject/join_form.do">join</a></li>
      			</ul>
 		</c:when>
 		<c:otherwise>
 		<ul class="before_profile">
-          <li><a href="./login.jsp">${sessionScope.loginUser.userID} </a></li>
+          <li><a href=#>${sessionScope.loginUser.userID} </a></li>
           <li>/</li>
           <li><a onclick="location.href='/BoardProject/logout.do'">로그아웃</a></li>
         </ul>

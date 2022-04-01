@@ -15,10 +15,6 @@ public class userBiz {
 	public String join(UserVo vo) {
 		return userDao.join(vo);
 	}
-	
-	
-	
-	 
 	 public UserVo tryLogin(UserVo vo) {
 			return userDao.tryLogin(vo);
 		}

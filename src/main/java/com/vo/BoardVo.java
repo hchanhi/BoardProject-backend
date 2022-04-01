@@ -6,72 +6,58 @@ public class BoardVo {
 	private int bno;
 	private String title;
 	private String content;
-	private String wirter;
-	private Date regate;
+	private String writer;
+	private Date regdate;
 	private int viewcnt;
-	
 	public BoardVo() {
 		super();
-		
+		// TODO Auto-generated constructor stub
 	}
-
-	public BoardVo(int bno, String title, String content, String wirter, Date regate, int viewcnt) {
+	public BoardVo(int bno, String title, String content, String writer, Date regdate, int viewcnt) {
 		super();
 		this.bno = bno;
 		this.title = title;
 		this.content = content;
-		this.wirter = wirter;
-		this.regate = regate;
+		this.writer = writer;
+		this.regdate = regdate;
 		this.viewcnt = viewcnt;
 	}
-
 	public int getBno() {
 		return bno;
 	}
-
 	public void setBno(int bno) {
 		this.bno = bno;
 	}
-
 	public String getTitle() {
 		return title;
 	}
-
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
 	public String getContent() {
 		return content;
 	}
-
 	public void setContent(String content) {
 		this.content = content;
 	}
-
-	public String getWirter() {
-		return wirter;
+	public String getWriter() {
+		return writer;
 	}
-
-	public void setWirter(String wirter) {
-		this.wirter = wirter;
+	public void setWriter(String writer) {
+		this.writer = writer;
 	}
-
-	public Date getRegate() {
-		return regate;
+	public Date getRegdate() {
+		return regdate;
 	}
-
-	public void setRegate(Date regate) {
-		this.regate = regate;
+	public void setRegdate(Date regdate) {
+		this.regdate = regdate;
 	}
-
 	public int getViewcnt() {
 		return viewcnt;
 	}
-
 	public void setViewcnt(int viewcnt) {
 		this.viewcnt = viewcnt;
 	}
 	
-
+	
 }

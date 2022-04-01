@@ -15,11 +15,12 @@ public class userDAO{
 	
 	@Autowired
 	private SqlSessionFactory factory;
+	
 	public String join(UserVo vo) {
 		SqlSession session = factory.openSession();
 		String result = null;
 		try {
-			int n = session.insert("user.join", vo);
+			int n = session.insert("user.userjoin", vo);
 			if (n > 0)
 				result = vo.getUserID();
 			session.commit();
@@ -39,21 +40,21 @@ public class userDAO{
 	
 	public UserVo tryLogin(UserVo vo) {
 		SqlSession session = factory.openSession();
-			vo = session.selectOne("user.login", vo);
+			vo = session.selectOne("user.userlogin", vo);
 			session.close();
 			return vo;
 	}
 	
 	public UserVo findId(UserVo vo) {
 		SqlSession session = factory.openSession();
-		vo = session.selectOne("user.findId", vo);
+		vo = session.selectOne("user.userfindId", vo);
 		session.close();
 		return vo;
 	}
 
 	public UserVo findPassword(UserVo vo) {
 		SqlSession session = factory.openSession();
-		vo = session.selectOne("user.findPassword", vo);
+		vo = session.selectOne("user.userfindPassword", vo);
 		session.close();
 		return vo;
 	}

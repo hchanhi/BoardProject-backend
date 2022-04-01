@@ -11,7 +11,7 @@
       <div class="home_board_wrap">
       <!-- 게시판 제목을 감싸는 영역 -->
       <div class="home_board_title">
-        <a href="/board/board.html"><strong>게시판</strong></a>
+        <a href="/BoardProject/list.do"><strong>게시판</strong></a>
       </div>
       <!-- 게시물 목록을 감싸는 영역 -->
       <div class="home_board_list_wrap">

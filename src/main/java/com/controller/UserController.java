@@ -2,7 +2,6 @@ package com.controller;
 
 
 
-import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,12 +25,17 @@ public class UserController {
 	@Autowired
 	private userBiz biz;
 	
-	@RequestMapping(value="/login.do", method=RequestMethod.POST)
+	 @RequestMapping(value = "/login_form.do")
+	    public String LoginForm() {
+			return "user/login";
+		}
+	
+	@RequestMapping(value="/login.action.do", method=RequestMethod.POST)
 	public String trylogin(UserVo vo, Model model) {
 		UserVo loginUser = biz.tryLogin(vo);
 		if(loginUser == null) {
 			model.addAttribute("check", 1);
-			return "redirect:login.jsp";
+			return "user/login";
 		}else {
 			model.addAttribute("loginUser", loginUser);
 			model.addAttribute("check", 0);
@@ -42,7 +46,7 @@ public class UserController {
 	@RequestMapping(value="/fialLogin.do")
     public String failLogin(Model model) {
     	model.addAttribute("check", 2);
-        return "redirect:login.jsp";        
+        return "user/login";        
         
     }
 	
@@ -53,18 +57,18 @@ public class UserController {
         return "redirect:index.jsp";        
         
     }
-	
+    @RequestMapping(value = "/join_form.do")
+    public String JoinForm() {
+		return "user/join";
+	}
 
-	@RequestMapping(value = "/join_form.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/join_action.do", method = RequestMethod.POST)
 	public ModelAndView insert(UserVo  vo){
 		String result=biz.join(vo);	
 		ModelAndView mav=new ModelAndView("user/result","myresult" , result);
 		     
 		return mav; 
 	}	
-	
-	
-	
 	
 	@RequestMapping(value="/find_id_form.do")
 	public String findIdView() {

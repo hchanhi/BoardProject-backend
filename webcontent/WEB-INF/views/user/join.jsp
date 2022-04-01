@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="../header.jsp" %>
+<%@ include file="../../../header.jsp" %>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <body class="login_body">
     <div class="login_main">
       <h1>회원가입</h1>
-      <form action="/BoardProject/join_form.do" id="joinform" method="POST">
+      <form action="/BoardProject/join_action.do" id="joinform" method="POST">
         <div class="inp_field">
           <input type="text" id="userNicName" name="userNicName" required autocomplete="off">
           <span></span>
@@ -44,7 +44,7 @@
           회원가입
           </button>
         <div class="signup_link">이미 회원이신가요?
-          <a href="login.jsp">로그인 하기</a>
+          <a href="/BoardProject/login_form.do">로그인 하기</a>
         </div>
       </form>
         

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ include file="../header.jsp" %>
+<%@ include file="../../../header.jsp" %>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -14,11 +14,11 @@
               <c:if test="${check == 1 }">
                 <script>
                 	alert("아이디나 비밀번호가 일치하지 않습니다.");
-                	location.href="/BoardProject/fialLogin.do"
+                	location.href="./BoardProject/fialLogin.do"
                 </script>
               </c:if>
               </div>
-      <form method="post" action="/BoardProject/login.do">
+      <form method="post" action="/BoardProject/login.action.do">
         <div class="inp_field">
           <input type="text" required name="userID" id="userID" autocomplete="off">
           <span></span>
@@ -41,7 +41,7 @@
         <button class="lg_submit" type="submit" onclick="Login()" >로그인</button>
         
         <div class="signup_link">아직 회원이 아니신가요?
-          <a href="join.jsp">회원가입</a>
+          <a href="/BoardProject/join_form.do">회원가입</a>
         </div>
       </form>
         
