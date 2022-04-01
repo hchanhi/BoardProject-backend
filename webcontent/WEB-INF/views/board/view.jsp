@@ -46,9 +46,11 @@
           <button type="button" onclick="location.href='/BoardProject/list.do'" class="list">
             목록
           </button>
+          <c:if test="${sessionScope.loginUser.userID == view.writer}">
           <button onclick="location.href='/BoardProject/edit_form.do?bno=${view.bno}'" class="">
             수정
           </button>
+          </c:if>
         </div>
       </div>
     </div>

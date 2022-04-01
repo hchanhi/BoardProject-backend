@@ -59,11 +59,13 @@
             >
           </div>
         </div>
-
+		
         <div class="btn_wrap">
+        
           <button type="submit" class="list">
             수정
           </button>
+          
           <button type="button" onclick="location.href='board.html'" class="">취소</button>
         </div>
           </form>

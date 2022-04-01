@@ -21,3 +21,4 @@ insert into board(title, content, writer) values("test2","test2","test2");
 select * from board;
 
 drop table board;
+
