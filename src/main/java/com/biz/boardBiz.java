@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.dao.boardDAO;
 import com.vo.BoardVo;
+import com.vo.page;
 
 @Service
 public class boardBiz {
@@ -30,4 +31,15 @@ public class boardBiz {
 		dao.edit(vo);
 	}
 	
+	public void delete(int bno) {
+		dao.delete(bno);
+	}
+	
+	public List<BoardVo> listPage(page pl){
+		return dao.listPage(pl);
+	}
+
+	public int ListCount() {
+		return dao.ListCount();
+	}
 }

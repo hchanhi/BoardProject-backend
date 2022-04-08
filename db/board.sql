@@ -1,4 +1,4 @@
-create table board (          
+create table bp_board (          
 bno int not null auto_increment,           
 title varchar(200) not null, 
 content varchar(4000)not null ,        
@@ -9,16 +9,20 @@ primary key(bno)
 );
 
 
-SELECT DATE_FORMAT(NOW(),'%Y-%m-%d') AS DATE FROM DUAL
-
-SELECT DATE_FORMAT(NOW(),'%Y년%m월%d일 %H시%i분%S초') AS DATE FROM DUAL
 
 
-insert into board(title, content, writer) values("test","test","test");
-insert into board(title, content, writer) values("test1","test1","test1");
-insert into board(title, content, writer) values("test2","test2","test2");
 
-select * from board;
+insert into bp_board(title, content, writer) values("test","test","admin");
+insert into bp_board(title, content, writer) values("test1","test1","admin");
+insert into bp_board(title, content, writer) values("test2","test2","admin");
+
+select * from bp_board;
 
 drop table board;
+drop table user;
+
+select * from board;
+select * from user;
+
+
 

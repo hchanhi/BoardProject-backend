@@ -6,21 +6,21 @@
 
 	
 	<select id="userlogin" parameterType="java.lang.String" resultType="user">
-		select * from userInfo where userID=#{userID} and userPassword=#{userPassword}
+		select * from bp_userInfo where userID=#{userID} and userPassword=#{userPassword}
 	</select>
 	
 	
 	<insert id="userjoin" parameterType="user" >
-		insert into userInfo(userNicName,userID,userEmail,userPassword)
+		insert into bp_userInfo(userNicName,userID,userEmail,userPassword)
 		values(#{userNicName},#{userID},#{userEmail},#{userPassword})
 	</insert>
 	
 	<select id="userfindId" parameterType="java.lang.String" resultType="user">
-		select * from userInfo where userNicName=#{userNicName} and userEmail=#{userEmail}
+		select * from bp_userInfo where userNicName=#{userNicName} and userEmail=#{userEmail}
 	</select>
 	
 	<select id="userfindPassword" parameterType="java.lang.String" resultType="user">
-		select * from userInfo where userID=#{userID} and userNicName=#{userNicName} and userEmail=#{userEmail}
+		select * from bp_userInfo where userID=#{userID} and userNicName=#{userNicName} and userEmail=#{userEmail}
 	</select>
 	
 </mapper>

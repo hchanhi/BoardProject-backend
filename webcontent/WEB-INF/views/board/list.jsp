@@ -25,7 +25,7 @@
             <div class="title">제목</div>
             <div class="writer">작성자</div>
             <div class="date">작성일</div>
-            <div class="count">조회</div>
+            <div class="count">조회수</div>
           </div>
           
           <c:forEach items="${list}" var="list">
@@ -41,15 +41,17 @@
       
         <div class="board_page">
           <!-- 나중에 <<, <, >, >> 대신 이미지 사용하기 -->
-          <a href="#" class="bt first"><<</a>
-          <a href="#" class="bt prev"><</a>
-          <a href="#" class="num on">1</a>
-          <a href="#" class="num">2</a>
-          <a href="#" class="num">3</a>
-          <a href="#" class="num">4</a>
-          <a href="#" class="num">5</a>
-          <a href="#" class="bt next">></a>
-          <a href="#" class="bt last">>></a>
+         <c:if test="${pageMaker.prev}">
+          <a href="listPage${pageMaker.makeQuery(pageMaker.startPage)}" class="bt first"><<</a>
+          <a href="listPage${pageMaker.makeQuery(pageMaker.startPage - 1)}" class="bt prev"><</a>
+         </c:if>
+         <c:forEach begin="${pageMaker.startPage}" end="${pageMaker.endPage}" var="idx">
+  			<li><a href="listPage?page=${idx}">${idx}</a></li>
+  		 </c:forEach>
+         <c:if test="${pageMaker.next && pageMaker.endPage > 0}">
+          <a href="listPage${pageMaker.makeQuery(pageMaker.endPage + 1)}" class="bt next">></a>
+          <a href="listPage${pageMaker.makeQuery(pageMaker.endPage)}" class="bt last">>></a>
+ 		 </c:if> 
         </div>
        
         <c:if test="${!empty sessionScope.loginUser}">

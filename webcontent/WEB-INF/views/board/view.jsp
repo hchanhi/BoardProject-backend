@@ -17,6 +17,13 @@
 
       <!-- 게시물을 감싸는 영역 -->
       <div class="board_view_wrap">
+      <c:if test="${!empty sessionScope.loginUser}">
+          <c:if test="${sessionScope.loginUser.userID == view.writer}">
+          <div class="delete_btn">
+         <a href="/BoardProject/delete.do?bno=${view.bno}"><i class="fa-solid fa-trash-can"></i></a>
+          </div>
+          </c:if>
+          </c:if>
         <div class="board_view">
           <div class="title">${view.title}</div>
           <div class="info">
@@ -30,7 +37,7 @@
             </dl>
             <dl>
               <dt>작성일</dt>
-              <dd><fmt:formatDate pattern = "yyyy/MM/dd hh:mm:ss" value="${view.regdate}"/></dd>
+              <dd><fmt:formatDate pattern = "yy/MM/dd hh:mm:ss" value="${view.regdate}"/></dd>
             </dl>
             <dl>
               <dt>조회</dt>

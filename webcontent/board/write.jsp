@@ -26,7 +26,7 @@
           <div class="info">
             <dl>
               <dt>작성자</dt>
-              <dd><input type="text" placeholder="작성자 입력" />${sessionScope.loginUser.userNicName}</dd>
+              <dd><input type="text" value="${sessionScope.loginUser.userNicName}" readonly /></dd>
             </dl>
             <dl>
               <dt>비밀번호</dt>

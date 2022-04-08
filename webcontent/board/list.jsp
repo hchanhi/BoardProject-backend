@@ -12,7 +12,7 @@
     <div class="board_wrap">
       <!-- 게시판 제목을 감싸는 영역 -->
       <div class="board_title">
-        <a href="./board.jsp"><strong>게시판</strong></a>
+        <a href="/BoardProject/list.do"><strong>게시판</strong></a>
         <p>게시판 입니다.</p>
       </div>
 
@@ -30,42 +30,14 @@
           
           <c:forEach items="${list}" var="list">
           <div>
-            <div class="num">${lsit.bno }</div>
+            <div class="num">${lsit.bno}</div>
             <div class="title"><a href="boardView.html">${list.title}</a></div>
             <div class="writer">${list.writer}</div>
             <div class="date">${lsit.regdate}</div>
             <div class="count">${list.viewcnt}</div>
           </div>
           </c:forEach>
-          <div>
-            <div class="num">4</div>
-            <div class="title"><a href="boardView.html">글 제목</a></div>
-            <div class="writer">아무개</div>
-            <div class="date">2022.01.01</div>
-            <div class="count">10</div>
-          </div>
-          <div>
-            <div class="num">3</div>
-            <div class="title"><a href="boardView.html">글 제목</a></div>
-            <div class="writer">아무개</div>
-            <div class="date">2022.01.01</div>
-            <div class="count">10</div>
-          </div>
-          <div>
-            <div class="num">2</div>
-            <div class="title"><a href="boardView.html">글 제목</a></div>
-            <div class="writer">아무개</div>
-            <div class="date">2022.01.01</div>
-            <div class="count">10</div>
-          </div>
-          <div>
-            <div class="num">1</div>
-            <div class="title"><a href="boardView.html">글 제목</a></div>
-            <div class="writer">아무개</div>
-            <div class="date">2022.01.01</div>
-            <div class="count">10</div>
-          </div>
-        </div>
+         
 
         <div class="board_page">
           <!-- 나중에 <<, <, >, >> 대신 이미지 사용하기 -->
@@ -79,6 +51,7 @@
           <a href="#" class="bt next">></a>
           <a href="#" class="bt last">>></a>
         </div>
+        
         <div class="btn_wrap">
           <button onclick="location.href='./boardProject/write.do'" class="list">
             글쓰기

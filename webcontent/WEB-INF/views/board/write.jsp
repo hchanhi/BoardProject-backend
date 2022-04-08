@@ -36,8 +36,8 @@
           </div>
           <div class="info">
             <dl>
-              <dt>작성자</dt>
-              <dd><input type="text" name="writer" value="${loginUser.userID}"/></dd>
+               <dt>작성자</dt>
+              <dd><input type="text" name="writer" value="${sessionScope.loginUser.userNicName}" readonly />
             </dl>
             
           </div>
