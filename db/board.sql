@@ -21,7 +21,9 @@ select * from bp_board;
 drop table board;
 drop table user;
 
+select * from place;
 select * from board;
+select * from member;
 select * from user;
 
 

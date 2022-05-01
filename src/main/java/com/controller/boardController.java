@@ -79,7 +79,7 @@ public class boardController {
 	public void getListPage(Model model, @RequestParam("num") int num) throws Exception {
 	 
 	 // 게시물 총 갯수
-	 int count = biz.count();
+	 int count = biz.ListCount();
 	  
 	 // 한 페이지에 출력할 게시물 갯수
 	 int postNum = 10;
